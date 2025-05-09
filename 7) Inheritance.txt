@@ -1,0 +1,35 @@
+
+7. Write a java program to demonstrate Inheritance simple program on java for the implementation of 
+   multiple inheritance using interfaces to calculate the area of rectangle and triangle
+
+interface rectangle{
+    public void rectanglearea(double l, double b);
+}
+
+interface triangle{
+    void trianglearea(double b, double h);
+}
+
+class Shapes implements rectangle, triangle{
+
+    public void rectanglearea(double l, double b){
+        System.out.println("Rectangle Area is: " +(l*b));
+    }
+
+    public void trianglearea(double b, double h){
+        System.out.println("Triangle Area is "+(0.5*b*h));
+    }
+}
+
+public class Inhheritance{
+    public static void main(String[] args) {
+        Shapes s = new Shapes();
+        s.rectanglearea(5,6);
+        s.trianglearea(4,3);
+    }
+}
+
+OUTPUT:
+
+Rectangle Area is: 30.0
+Triangle Area is 6.0

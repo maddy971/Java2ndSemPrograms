@@ -1,0 +1,32 @@
+
+6. Write a java program to demonstrate Constructor & Method Overloading.
+
+public class Over {
+    Over(){
+        System.out.println("Default Constructor");
+    }
+    Over(int a){
+        System.out.println("Value of a is " +a);
+    }
+    public static void main(String[] args) {
+        Over o = new Over();
+        Over o1 = new Over(10);
+        Over o2 = new Over();
+        o2.method();
+        o2.method1(20);
+    }
+    void method(){
+        System.out.println("This is method");
+    }
+    void method1(int a){
+        System.out.println("Value of a is: "+a);
+    }
+}
+
+OUTPUT:
+
+Default Constructor
+Value of a is 10
+Default Constructor
+This is method
+Value of a is: 20

@@ -1,0 +1,56 @@
+
+8. Write a java Applet program which handles Keyboard event
+
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Program8 extends Applet implements KeyListener {
+    String msg = "", key;
+
+    public void init() {
+        addKeyListener(this);
+        setFocusable(true);  
+    }
+
+    public void paint(Graphics g) {
+        g.drawString(msg, 150, 100);  
+    }
+
+   
+    public void keyReleased(KeyEvent ke) {
+        showStatus(key + " Key Released");
+    }
+
+   
+    public void keyPressed(KeyEvent ke) {
+        int keycode = ke.getKeyCode();
+        key = KeyEvent.getKeyText(keycode);
+        repaint();
+        showStatus(key + " Key Pressed");
+    }
+
+
+    public void keyTyped(KeyEvent ke) {
+        char c = ke.getKeyChar();
+        msg += c;
+        key = String.valueOf(c);
+        repaint();
+    }
+
+    public static void main(String[] args) {
+        Frame f = new Frame("Applet in Frame");
+        Program8 applet = new Program8();
+        applet.init();
+        f.add(applet);
+        f.setSize(400, 300);
+        f.setVisible(true);  
+        f.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                f.dispose();
+            }
+        });
+    }
+}
+
+OUTPUT shows in Applet Frame

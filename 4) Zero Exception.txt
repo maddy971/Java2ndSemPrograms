@@ -1,0 +1,18 @@
+
+4. Write a java program to demonstrate  a division by zero exception
+
+public class Exception {
+    public static void main(String[] args) {
+        try{
+            int a=5, b=0;
+            System.out.println(a/b);
+        }
+        catch(ArithmeticException e){
+            System.out.println("The number can't be Divisible by zero...");
+        }
+    } 
+}
+
+OUTPUT:
+The number can't be Divisible by zero...
+

@@ -1,0 +1,21 @@
+
+3a. To find the area and circumference of the circle by accepting the radius from the user
+
+import java.util.Scanner;
+public class Circle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Circle Radius: ");
+        double radius = sc.nextDouble();
+        System.out.println("Area of circle: " +(Math.PI * radius * radius));
+        System.out.println("Circumference of Circle: " +(2 * Math.PI * radius));
+    }
+    
+}
+
+OUTPUT:
+
+Enter Circle Radius: 
+10
+Area of circle: 314.1592653589793
+Circumference of Circle: 62.83185307179586
